@@ -1,0 +1,35 @@
+[
+  {
+    "tax": 399,
+    "shippingFee": 499,
+    "items": [
+      {
+        "name": "accent chair",
+        "price": 2599,
+        "image": "https://images.unsplash.com/photo-1581539250439-c96689b516dd",
+        "amount": 34,
+        "product": "6126ad3424d2bd09165a68c8"
+      }
+    ]
+  },
+  {
+    "tax": 499,
+    "shippingFee": 799,
+    "items": [
+      {
+        "name": "bed",
+        "price": 2699,
+        "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+        "amount": 3,
+        "product": "6126ad3424d2bd09165a68c7"
+      },
+      {
+        "name": "chair",
+        "price": 2999,
+        "image": "https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45",
+        "amount": 2,
+        "product": "6126ad3424d2bd09165a68c4"
+      }
+    ]
+  }
+]

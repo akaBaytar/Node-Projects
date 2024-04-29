@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="script.js" defer></script>
+  <title>E-Commerce API</title>
+</head>
+<body>
+  <div class=container-fluid>
+ <div class=row>
+  <div class="col-md-12 collection-intro">
+   <h3>E-Commerce API</h3>
+   <p>
+  </div>
+  <div class=col-md-12>
+   <div class=col-md-3>
+    <ul>
+     <li><strong><a href=#Auth>Auth</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Auth-LoginUser>Login User</a>
+       <li><a class=endpoint_menu href=#jump-Auth-LogoutUser>Logout User</a>
+       <li><a class=endpoint_menu href=#jump-Auth-RegisterUser>Register User</a>
+      </ul>
+     <li><strong><a href=#Order>Order</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Order-CreateOrder>Create Order</a>
+       <li><a class=endpoint_menu href=#jump-Order-GetAllOrders>Get All Orders</a>
+       <li><a class=endpoint_menu href=#jump-Order-GetSingleOrder>Get Single Order</a>
+       <li><a class=endpoint_menu href=#jump-Order-ShowCurrentUserOrders>Show Current User Orders</a>
+       <li><a class=endpoint_menu href=#jump-Order-UpdateOrder>Update Order</a>
+      </ul>
+     <li><strong><a href=#Product>Product</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Product-CreateProduct>Create Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-DeleteProduct>Delete Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-GetAllProducts>Get All Products</a>
+       <li><a class=endpoint_menu href=#jump-Product-GetSingleProduct>Get Single Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-GetSingleProductReviews>Get Single Product Reviews</a>
+       <li><a class=endpoint_menu href=#jump-Product-UpdateProduct>Update Product</a>
+       <li><a class=endpoint_menu href=#jump-Product-UploadImage>Upload Image</a>
+      </ul>
+     <li><strong><a href=#Review>Review</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-Review-CreateReview>Create Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-DeleteReview>Delete Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-GetAllReviews>Get All Reviews</a>
+       <li><a class=endpoint_menu href=#jump-Review-GetSingleReview>Get Single Review</a>
+       <li><a class=endpoint_menu href=#jump-Review-UpdateReview>Update Review</a>
+      </ul>
+     <li><strong><a href=#User>User</a></strong>
+      <ul>
+       <li><a class=endpoint_menu href=#jump-User-GetAllUsers>Get All Users</a>
+       <li><a class=endpoint_menu href=#jump-User-GetSingleUser>Get Single User</a>
+       <li><a class=endpoint_menu href=#jump-User-ShowCurrentUser>Show Current User</a>
+       <li><a class=endpoint_menu href=#jump-User-UpdateUser>Update User</a>
+       <li><a class=endpoint_menu href=#jump-User-UpdateUserPassword>Update User Password</a>
+      </ul>
+    </ul>
+   </div>
+   <div class=col-md-9>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Auth>Auth
+       <span class=badge>3</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <p>Authenticate User
+      <div class=request-item>
+       <div class=panel-group id=accordion-Auth>
+        <div class="panel panel-success" id=jump-Auth-LoginUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-LoginUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Login User</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /auth/login
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Auth-LoginUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;email&#34;:&#34;john@ecommerce.com&#34;,
+            &#34;password&#34;:&#34;PASSWORD&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Auth-LogoutUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Auth href=#collapse-Auth-LogoutUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Logout User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /auth/logout
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-success" id=jump-Auth-RegisterUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Auth href=#collapse-Auth-RegisterUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Register User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /auth/register
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Auth-RegisterUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;: &#34;jane&#34;,
+            &#34;email&#34;: &#34;jane@ecommerce.com&#34;,
+            &#34;password&#34;: &#34;PASSWORD&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Order>Order
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Order>
+        <div class="panel panel-success" id=jump-Order-CreateOrder>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-CreateOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /orders
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Order-CreateOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;tax&#34;: 499,
+            &#34;shippingFee&#34;: 799,
+            &#34;items&#34;: [
+            {
+            &#34;name&#34;: &#34;bed&#34;,
+            &#34;price&#34;: 2699,
+            &#34;image&#34;:&#34;https://images.unsplash.com/photo-1505693416388-ac5ce068fe85,
+            &#34;amount&#34;: 3,
+            &#34;product&#34;: &#34;615c873ad584c748cc86e5bb&#34;
+            },
+            {
+            &#34;name&#34;: &#34;chair&#34;,
+            &#34;price&#34;: 2999,
+            &#34;image&#34;:&#34;https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45,
+            &#34;amount&#34;: 2,
+            &#34;product&#34;: &#34;615e04a132ba7c9f0338f13e&#34;
+            }
+            ]
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-GetAllOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-GetAllOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Orders</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /orders
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-GetSingleOrder>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-GetSingleOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /orders/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Order-ShowCurrentUserOrders>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Order href=#collapse-Order-ShowCurrentUserOrders>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Show Current User Orders</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /orders/my-orders
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-warning" id=jump-Order-UpdateOrder>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Order href=#collapse-Order-UpdateOrder>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Order</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            /orders/:id
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Order-UpdateOrder class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;paymentIntentId&#34;:&#34;PAYMENT_INTENT_ID&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Product>Product
+       <span class=badge>7</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Product>
+        <div class="panel panel-success" id=jump-Product-CreateProduct>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Product
+           href=#collapse-Product-CreateProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /products
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-CreateProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;: &#34;Emperor Bed&#34;,
+            &#34;price&#34;: 23999,
+            &#34;colors&#34;: ["#5BBCFF", "#FFFAB7", "#FFD1E3", "#7EA1FF"],
+            &#34;company&#34;: &#34;ikea&#34;,
+            &#34;description&#34;: &#34;Vivamus urna ipsum, eleifend at mattis sed, euismod ut tellus. Phasellus finibus eget nibh nec tincidunt. Vestibulum congue leo quis tristique hendrerit. Duis congue augue id lectus bibendum, eu gravida metus efficitur. Ut convallis maximus odio, sit amet egestas mi pulvinar vel.&#34;,
+            &#34;category&#34;: &#34;bedroom&#34;,
+            &#34;featured&#34;:&#34;false&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-Product-DeleteProduct>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-DeleteProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-danger">DELETE</strong>
+            &nbsp;
+            /products/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Product-GetAllProducts>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetAllProducts>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Products</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /products
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Product-GetSingleProduct>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetSingleProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /products/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Product-GetSingleProductReviews>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Product href=#collapse-Product-GetSingleProductReviews>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Product
+             Reviews</strong> &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /products/:id/reviews
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-warning" id=jump-Product-UpdateProduct>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Product
+           href=#collapse-Product-UpdateProduct>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Product</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            /products/:id
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-UpdateProduct class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34; :&#34;new testing product&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-success" id=jump-Product-UploadImage>
+         <div class=panel-heading><small class="pull-right text-muted">formdata</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Product href=#collapse-Product-UploadImage>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Upload Image</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /products/upload-image
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Product-UploadImage class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5>
+           <table class="table table-hover">
+            <thead>
+             <tr>
+              <th>Key
+              <th>Value
+              <th>Description
+            <tbody>
+             <tr>
+              <td>image
+              <td>
+              <td>
+           </table>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=Review>Review
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-Review>
+        <div class="panel panel-success" id=jump-Review-CreateReview>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-success data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-CreateReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Create Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-success">POST</strong>
+            &nbsp;
+            /reviews
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Review-CreateReview class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;product&#34;:&#34;615c873ad584c748cc86e5bb&#34;,
+            &#34;rating&#34;:1,
+            &#34;title&#34;:&#34;comment title&#34;,
+            &#34;comment&#34;:&#34;test comment by john doe&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-danger" id=jump-Review-DeleteReview>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-danger data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-DeleteReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Delete Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-danger">DELETE</strong>
+            &nbsp;
+            /reviews/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Review-GetAllReviews>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-GetAllReviews>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Reviews</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /reviews
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-Review-GetSingleReview>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-Review href=#collapse-Review-GetSingleReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /reviews/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-warning" id=jump-Review-UpdateReview>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-Review href=#collapse-Review-UpdateReview>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update Review</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            /reviews/:id
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-Review-UpdateReview class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;rating&#34;:1,
+            &#34;title&#34;:&#34;edited comment&#34;,
+            &#34;comment&#34;:&#34;edited comment by john doe&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="panel panel-default">
+     <div class=panel-heading>
+      <h3 class=panel-title id=User>User
+       <span class=badge>5</span>
+      </h3>
+     </div>
+     <div class=panel-body>
+      <p>
+      <div class=request-item>
+       <div class=panel-group id=accordion-User>
+        <div class="panel panel-info" id=jump-User-GetAllUsers>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-GetAllUsers>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get All Users</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /users
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-User-GetSingleUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-GetSingleUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Get Single User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /users/:id
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-info" id=jump-User-ShowCurrentUser>
+         <div class=panel-heading><small class="pull-right text-muted"></small><a class=text-info data-toggle=collapse
+           data-parent=#accordion-User href=#collapse-User-ShowCurrentUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Show Current User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-info">GET</strong>
+            &nbsp;
+            /users/me
+           </h4>
+          </a></div>
+        </div>
+        <div class="panel panel-warning" id=jump-User-UpdateUser>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdateUser>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update User</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            /users/update-user
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-User-UpdateUser class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;name&#34;:&#34;john&#34;,&#34;email&#34;:&#34;john@ecommerce.com&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+        <div class="panel panel-warning" id=jump-User-UpdateUserPassword>
+         <div class=panel-heading><small class="pull-right text-muted">raw</small>
+          <a class=text-warning data-toggle=collapse data-parent=#accordion-User href=#collapse-User-UpdateUserPassword>
+           <h4 class=panel-title><span class="glyphicon glyphicon-plus"></span><strong>Update User Password</strong>
+            &nbsp;|&nbsp;
+            <strong class="request-method border-warning">PATCH</strong>
+            &nbsp;
+            /users/update-user-password
+           </h4>
+          </a>
+         </div>
+         <div id=collapse-User-UpdateUserPassword class="panel-collapse collapse">
+          <div class=panel-body>
+           <h5 class="label label-primary">Body</h5><span class=resp-prettyprint>{
+            &#34;newPassword&#34;:&#34;NEW_PASSWORD&#34;,
+            &#34;oldPassword&#34;:&#34;PASSWORD&#34;
+            }</span>
+           <div class=clearfix></div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ </div>
+ <br><br>
+ <footer class="navbar-default navbar-fixed-bottom">
+  <div class=container-fluid>
+   <div class="span12 text-center"><span data-toggle=tooltip>
+    Burak Bilgili | E-Commerce API | <span id="currentYear"></span>
+  </div>
+ </footer>
+ <script>
+  document.querySelector('#currentYear').textContent = new Date().getFullYear()
+ </script>
+</body>
+</html>

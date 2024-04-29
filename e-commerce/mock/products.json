@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Accent Chair",
+    "price": 25999,
+    "image": "https://images.unsplash.com/photo-1581539250439-c96689b516dd",
+    "colors": ["#E4C59E", "#AF8260", "#803D3B", "#322C2B"],
+    "company": "marcos",
+    "description": "Donec pretium ipsum ut lorem sagittis lacinia. In hac habitasse platea dictumst. Mauris tincidunt dolor et erat faucibus pretium. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin vitae risus tellus. Vivamus viverra purus vitae nisl ultricies mattis.",
+    "category": "office"
+  },
+  {
+    "name": "Albany Sectional",
+    "price": 109999,
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+    "colors": ["#1E0342", "#0E46A3", "#9AC8CD", "#E1F7F5"],
+    "company": "liddy",
+    "description": "Nullam convallis, massa ut faucibus lacinia, lectus diam faucibus massa, a laoreet nulla ipsum vitae felis. Duis et vehicula nulla. Nullam tristique ex leo, in laoreet mi porttitor quis. Sed in molestie velit. Nullam ultricies dui sed massa consectetur congue. Praesent egestas tempor lacus, quis sollicitudin elit consequat vitae.",
+    "category": "living room"
+  },
+  {
+    "name": "Armchair",
+    "price": 12599,
+    "image": "https://plus.unsplash.com/premium_photo-1680112806039-244731d88d45",
+    "colors": ["#4793AF", "#FFC470", "#DD5746", "#8B322C"],
+    "company": "marcos",
+    "description": "Etiam et massa eros. Curabitur a elit at risus euismod vulputate. Praesent a efficitur metus. Mauris lobortis orci interdum erat elementum cursus ac sit amet est. Vestibulum semper risus dui, sed varius lectus consectetur non. Sed in magna sit amet purus tincidunt lacinia. ",
+    "category": "bedroom"
+  },
+  {
+    "name": "Emperor Bed",
+    "price": 23999,
+    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+    "colors": ["#5BBCFF", "#FFFAB7", "#FFD1E3", "#7EA1FF"],
+    "company": "ikea",
+    "description": "Vivamus urna ipsum, eleifend at mattis sed, euismod ut tellus. Phasellus finibus eget nibh nec tincidunt. Vestibulum congue leo quis tristique hendrerit. Duis congue augue id lectus bibendum, eu gravida metus efficitur. Ut convallis maximus odio, sit amet egestas mi pulvinar vel.",
+    "category": "bedroom"
+  }
+]

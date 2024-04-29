@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      defer></script>
+    <script src="./browser-app.js" defer></script>
+  </head>
+  <body>
+    <form class="form file-form">
+      <h4>File Upload</h4>
+      <div class="form-row">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-input"
+          value=""
+          placeholder="Computer"
+          autocomplete="off" />
+      </div>
+      <div class="form-row">
+        <label for="price" class="form-label">Price</label>
+        <input
+          type="number"
+          id="price"
+          class="form-input"
+          value=""
+          placeholder="150.99" />
+      </div>
+      <div class="form-row">
+        <label for="image" class="form-label">Image</label>
+        <input type="file" id="image" accept="image/*" />
+      </div>
+      <div class="form-row">
+        <button type="submit" class="btn btn-block">ADD PRODUCT</button>
+      </div>
+    </form>
+    <section class="container"></section>
+  </body>
+</html>

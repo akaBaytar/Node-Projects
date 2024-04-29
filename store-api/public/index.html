@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet" />
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <title>Store API</title>
+
+    <style>
+      body {
+        font-family: 'Poppins', system-ui, sans-serif;
+        margin: 20px;
+        color: #eee;
+        background-color: #222831;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      code {
+        background-color: #222831;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      pre {
+        white-space: pre-wrap;
+        word-wrap: normal;
+        background-color: #31363f;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+        line-height: 2;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>API Documentation</h1>
+
+    <h2>Overview</h2>
+    <p>
+      This API endpoint allows users to retrieve a list of products based on
+      various filtering, sorting, and pagination options.
+    </p>
+
+    <h2>Endpoint</h2>
+    <pre>GET /api/v1/products</pre>
+
+    <h2>Query Parameters</h2>
+<pre>
+<strong>- featured</strong>: Filter products by featured status. Accepted values: <code>true</code> or <code>false</code>
+<strong>- company</strong>: Filter products by company name
+<strong>- name</strong>: Filter products by name (case-insensitive, supports partial matches)
+<strong>- sort</strong>: Sort products by specific parameters. Multiple parameters can be separated by commas
+<strong>- select</strong>: Select specific fields in the response object. Multiple fields can be selected by separating them with commas
+<strong>- filter</strong>: Filter products based on numerical criteria. Supports comparison operators <code>&lt;</code> , <code>&gt;</code> , <code>&lt;=</code> , <code>&gt;=</code> , and <code>=</code>
+Multiple filters can be applied by separating them with commas. Filters are applied on fields <code>price</code> and <code>rating</code>
+</pre>
+
+<h2>Sample Usage</h2>
+<pre>
+<code>GET /api/v1/products</code>
+</pre>
+<p>Retrieves all products.</p>
+
+<pre>
+<code>GET /api/v1/products?featured=true</code>
+</pre>
+<p>Retrieves featured products.</p>
+
+<pre>
+<code>GET /api/v1/products?company=Acme</code>
+</pre>
+<p>Retrieves products from the company "Acme".</p>
+
+<pre>
+<code>GET /api/v1/products?name=widget</code>
+</pre>
+<p>Retrieves products with the word "widget" in their name (case-insensitive).</p>
+
+<pre>
+<code>GET /api/v1/products?sort=price,-rating</code>
+</pre>
+<p>Sorts products by price in ascending order and rating in descending order.</p>
+
+<pre>
+<code>GET /api/v1/products?select=name,price,rating</code>
+</pre>
+<p>Selects only the name, price, and rating fields in the response.</p>
+
+<pre>
+<code>GET /api/v1/products?filter=price&lt;=100,rating&gt;4</code>
+</pre>
+<p>Filters products with a price less than or equal to 100 and a rating greater than 4.</p>
+
+<pre>
+<code>GET /api/v1/products?page=1&amp;limit=10</code>
+</pre>
+<p>Retrieves the first page of products with a limit of 10 products per page.</p>
+</pre>
+
+
+    <h2>Response</h2>
+    <p>The response consists of the following key components:</p>
+
+<pre>
+<strong>- page</strong>: The current page number of the results.</li>
+<strong>- limit</strong>: The maximum number of products returned per page.</li>
+<strong>- products</strong>: An array containing product objects that match the specified criteria.</li>
+</pre>
+
+    <h2>Sample Response</h2>
+
+<pre>
+{
+  "page": 1,
+  "limit": 10,
+  "products": [
+    {
+      "name": "Widget A",
+      "price": 50,
+      "rating": 4.5
+    },
+    {
+      "name": "Widget B",
+      "price": 75,
+      "rating": 4.8
+    },
+    // Additional product objects...
+  ]
+}
+</pre>
+
+    <h2>Notes</h2>
+    <ul>
+      <li>
+        If no query parameters are provided, the endpoint returns <a href="/api/v1/products">all products</a>.
+      </li>
+      <li>
+        Pagination is applied by default with a limit of 12 products per page
+        and defaults to page 1 if not specified.
+      </li>
+    </ul>
+  </body>
+</html>
